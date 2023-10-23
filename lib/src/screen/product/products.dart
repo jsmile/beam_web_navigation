@@ -39,7 +39,7 @@ class Products extends StatelessWidget {
                 //  Beamer.of(context)
                 //    .beamingHistory
                 //    .map(
-                //      ( e ) => e.historyMap(
+                //      ( e ) => e.history.map(
                 //        (val) => val.routeInformation.location
                 //      )
                 //    )
