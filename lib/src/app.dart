@@ -29,6 +29,7 @@ class _AppState extends State<App> {
         '/': (context, state, data) => const Home(),
         '/profile': (context, state, data) => const Profile(),
         '/products': (context, state, data) => const Products(),
+
         // parameter passing
         '/products/:product': (context, state, data) {
           // :product is a parameter
