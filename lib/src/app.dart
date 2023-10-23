@@ -1,4 +1,10 @@
+import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
+
+import 'screen/home.dart';
+import 'screen/product/product.dart';
+import 'screen/product/products.dart';
+import 'screen/profile.dart';
 
 // 1. Understanding the boilerplate codes and things needed to start beamer.
 //   1.1 Understatnding Code Structure
@@ -17,64 +23,33 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
+  final BeamerDelegate routerDelegate = BeamerDelegate(
+    locationBuilder: RoutesLocationBuilder(
+      routes: {
+        '/': (context, state, data) => const Home(),
+        '/profile': (context, state, data) => const Profile(),
+        '/products': (context, state, data) => const Products(),
+        // parameter passing
+        '/products/:product': (context, state, data) {
+          // :product is a parameter
+          final String product = state.pathParameters['product']!;
+
+          return BeamPage(
+            key: ValueKey('Product-$product'),
+            title: 'A Product - $product',
+            popToNamed: '/product3',
+            type: BeamPageType.scaleTransition,
+            child: Product(title: product),
+          );
+        },
+      },
+    ),
+  );
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Beam Navigation Demo',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
-      ),
-      home: const MyHomePage(title: 'Beam Navigation Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text(widget.title),
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+    return MaterialApp.router(
+      routeInformationParser: BeamerParser(),
+      routerDelegate: routerDelegate,
     );
   }
 }
