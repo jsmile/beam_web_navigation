@@ -9,9 +9,14 @@ import 'package:flutter/material.dart';
 //   4.1. Usage of popRoute() function
 //
 
-class App extends StatelessWidget {
+class App extends StatefulWidget {
   const App({super.key});
 
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
