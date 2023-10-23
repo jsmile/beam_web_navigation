@@ -38,6 +38,7 @@ class _AppState extends State<App> {
           return BeamPage(
             key: ValueKey('Product-$product'),
             title: 'A Product - $product',
+            // popRoute() 에서 사용될 target 경로 정의
             popToNamed: '/product3',
             type: BeamPageType.scaleTransition,
             child: Product(title: product),

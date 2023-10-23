@@ -28,6 +28,8 @@ class Product extends StatelessWidget {
                 // popToNamed() : 특정 경로로 이동하면서, 이전 beamHistory 경로들을 모두 pop
                 // 그러나 일반 History 경로는 남아있음.
                 Beamer.of(context).popToNamed('/profile');
+
+                // BeamPage() 의 popToNamed 속성에 정의된 target 경로로 pop 이동
                 // Beamer.of(context).popRoute();
 
                 // print(
