@@ -1,6 +1,8 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
+import './two_devided_screen_exports.dart';
+
 class SideNav extends StatefulWidget {
   final GlobalKey<BeamerState> beamer;
 
@@ -40,7 +42,7 @@ class _SideNavState extends State<SideNav> {
   @override
   Widget build(BuildContext context) {
     final path = (context.currentBeamLocation.state as BeamState).uri.path;
-    print('path: $path');
+    debugPrint(info('### path: $path'));
 
     if (path.contains('/dashboard')) {
       selected = 0;
@@ -55,6 +57,7 @@ class _SideNavState extends State<SideNav> {
     }
 
     return Container(
+      color: Colors.grey[100],
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: navItems.map(

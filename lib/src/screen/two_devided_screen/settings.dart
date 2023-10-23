@@ -11,28 +11,54 @@ class Settings extends StatelessWidget {
       backgroundColor: Colors.amber,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
-        child: Center(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Settings',
-                style: GoogleFonts.overpass(
-                  color: Colors.white,
-                  fontSize: 30.0,
-                  letterSpacing: 1.0,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Settings',
+              style: GoogleFonts.overpass(
+                color: Colors.white,
+                fontSize: 30.0,
+                letterSpacing: 1.0,
+              ),
+            ),
+            const SizedBox(height: 20.0),
+            InkWell(
+              onTap: () {
+                // _beamKey.currentState?.routerDelegate.beamToNamed('/settings/profile');
+                context.beamToNamed('/settings/profile');
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Profile Settings',
+                  style: GoogleFonts.overpass(
+                    color: Colors.white,
+                    fontSize: 30.0,
+                    letterSpacing: 1.0,
+                  ),
                 ),
               ),
-              const SizedBox(height: 20.0),
-              InkWell(
-                onTap: () {
-                  // _beamKey.currentState?.routerDelegate.beamToNamed('/settings/profile');
-                  context.beamToNamed('/settings/profile');
-                },
-                child: const Padding(padding: EdgeInsets.all(10.0)),
+            ),
+            const SizedBox(height: 20.0),
+            InkWell(
+              onTap: () {
+                // _beamKey.currentState?.routerDelegate.beamToNamed('/settings/account');
+                context.beamToNamed('/settings/account');
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(10.0),
+                child: Text(
+                  'Account Settings',
+                  style: GoogleFonts.overpass(
+                    color: Colors.white,
+                    fontSize: 30.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
