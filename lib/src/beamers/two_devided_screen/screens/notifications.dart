@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class TowDevidedProfile extends StatelessWidget {
-  const TowDevidedProfile({super.key});
+class Notifications extends StatelessWidget {
+  const Notifications({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +11,9 @@ class TowDevidedProfile extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Two Devided Screen Profile',
+              'Notifications',
               style: GoogleFonts.overpass(
-                color: Colors.white,
+                color: Colors.grey[850],
                 fontSize: 30.0,
                 letterSpacing: 1.0,
               ),

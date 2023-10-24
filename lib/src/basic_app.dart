@@ -1,10 +1,7 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
-import 'screen/home.dart';
-import 'screen/product/product.dart';
-import 'screen/product/products.dart';
-import 'screen/profile.dart';
+import 'beamers/basic/basic_exports.dart';
 
 // 1. Understanding the boilerplate codes and things needed to start beamer.
 //   1.1 Understatnding Code Structure
@@ -15,14 +12,14 @@ import 'screen/profile.dart';
 //   4.1. Usage of popRoute() function
 //
 
-class App extends StatefulWidget {
-  const App({super.key});
+class BasicApp extends StatefulWidget {
+  const BasicApp({super.key});
 
   @override
-  State<App> createState() => _AppState();
+  State<BasicApp> createState() => _BasicAppState();
 }
 
-class _AppState extends State<App> {
+class _BasicAppState extends State<BasicApp> {
   final BeamerDelegate routerDelegate = BeamerDelegate(
     locationBuilder: RoutesLocationBuilder(
       routes: {

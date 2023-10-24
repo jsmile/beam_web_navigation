@@ -1,0 +1,9 @@
+export '/src/utils/debug_colors.dart';
+export './screens/about.dart';
+export './screens/account_settings.dart';
+export './screens/dashboard.dart';
+export './screens/notifications.dart';
+export './screens/settings.dart';
+export './screens/side_nav.dart';
+export './screens/profile_two.dart';
+export './screens/two_devided_profile.dart';

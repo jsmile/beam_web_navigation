@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class Notifications extends StatelessWidget {
-  const Notifications({super.key});
+class About extends StatelessWidget {
+  const About({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,9 +11,9 @@ class Notifications extends StatelessWidget {
         child: Column(
           children: [
             Text(
-              'Notifications',
+              'About',
               style: GoogleFonts.overpass(
-                color: Colors.white,
+                color: Colors.grey[850],
                 fontSize: 30.0,
                 letterSpacing: 1.0,
               ),

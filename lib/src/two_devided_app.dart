@@ -1,7 +1,7 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
-import 'screen/landing_screen.dart';
+import 'beamers/two_devided_screen/landing_screen.dart';
 
 /// App for Two Devided Screen Navigation
 class TwoDevidedApp extends StatefulWidget {
