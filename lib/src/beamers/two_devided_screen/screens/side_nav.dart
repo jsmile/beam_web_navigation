@@ -1,7 +1,7 @@
 import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
-import './two_devided_screen_exports.dart';
+import '../two_devided_screen_exports.dart';
 
 class SideNav extends StatefulWidget {
   final GlobalKey<BeamerState> beamer;

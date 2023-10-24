@@ -1,9 +1,17 @@
 import 'package:flutter/material.dart';
 
-import 'src/basic_app.dart';
-// import './src/two_devided_app.dart';
+import './src/app_exports.dart';
 
 void main() {
-  runApp(const BasicApp());
+  // Beamer 기본
+  // runApp(const BasicApp());
+
+  // WEB 화면처럼 2분할 화면
   // runApp(const TwoDevidedApp());
+
+  // deep navigation
+  // runApp(NestedNavigationApp());
+
+  // multi histories accoding to location
+  runApp(const MultiBeamersApp());
 }

@@ -22,7 +22,9 @@ class BasicApp extends StatefulWidget {
 class _BasicAppState extends State<BasicApp> {
   final BeamerDelegate routerDelegate = BeamerDelegate(
     locationBuilder: RoutesLocationBuilder(
+      // represents a state of a stack of one or more pages.
       routes: {
+        // Return either Widgets or BeamPages
         '/': (context, state, data) => const Home(),
         '/profile': (context, state, data) => const Profile(),
         '/products': (context, state, data) => const Products(),

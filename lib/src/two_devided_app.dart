@@ -17,6 +17,7 @@ class _TwoDevidedAppState extends State<TwoDevidedApp> {
     // first Method
     locationBuilder: RoutesLocationBuilder(
       routes: {
+        // Return either Widgets or BeamPages
         '*': (context, state, data) => const LandingScreen(),
       },
     ),
