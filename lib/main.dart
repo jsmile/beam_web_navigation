@@ -1,3 +1,4 @@
+import 'package:beam_web_navigation/src/nested_navigation_app.dart';
 import 'package:flutter/material.dart';
 
 import './src/app_exports.dart';
