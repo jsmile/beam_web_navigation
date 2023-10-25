@@ -1,10 +1,12 @@
-import 'package:beam_web_navigation/src/nested_navigation_app.dart';
 import 'package:flutter/material.dart';
+import 'package:beamer/beamer.dart';
 
 import './src/app_exports.dart';
 
 void main() {
+  Beamer.setPathUrlStrategy();
   // runApp(const BasicApp());
   // runApp(const TwoDevidedApp());
-  runApp(NestedNavigationApp());
+  // runApp(NestedNavigationApp());
+  runApp(LocationBuilderApp());
 }
