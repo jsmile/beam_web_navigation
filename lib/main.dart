@@ -8,5 +8,6 @@ void main() {
   // runApp(const BasicApp());
   // runApp(const TwoDevidedApp());
   // runApp(NestedNavigationApp());
-  runApp(LocationBuilderApp());
+  // runApp(LocationBuilderApp());
+  runApp(ChangeNotifierCustomStateApp());
 }
