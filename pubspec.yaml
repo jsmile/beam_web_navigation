@@ -21,6 +21,9 @@ dependencies:
   beamer: ^1.5.6
   # Google Fonts
   google_fonts: ^6.1.0
+  # State Management
+  flutter_bloc: ^8.1.3
+
 
 dev_dependencies:
   flutter_test:
@@ -29,8 +32,7 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 
-flutter:
-  
+flutter:  
   uses-material-design: true
   
   # assets:
