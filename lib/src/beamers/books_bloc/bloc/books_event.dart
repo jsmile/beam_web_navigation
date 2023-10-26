@@ -1,7 +1,7 @@
 part of 'books_bloc.dart';
 
-// @immutable
-sealed class BooksEvent {}
+@immutable
+abstract class BooksEvent {}
 
 class LoadBooksEvent extends BooksEvent {}
 

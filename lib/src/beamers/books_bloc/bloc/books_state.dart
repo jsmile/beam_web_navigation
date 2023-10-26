@@ -1,6 +1,6 @@
 part of 'books_bloc.dart';
 
-// @immutable
+@immutable
 abstract class BooksState {}
 
 class LoadingState extends BooksState {}
