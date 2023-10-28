@@ -6,3 +6,4 @@ export './change_notifier_custom_state_app.dart';
 export './multi_beamers_app.dart';
 export './books_bloc_app.dart';
 export './deep_links_app.dart';
+export './beam_guard_app.dart';

@@ -2,13 +2,10 @@ import 'package:beamer/beamer.dart';
 import 'package:flutter/material.dart';
 
 import './src/app_exports.dart';
-import './src/beamers/deep_links/deep_link_exports.dart';
 
 void main() {
   Beamer.setPathUrlStrategy();
 
-  createAuthenticator();
-  createBeamerDelegate();
   // beamerDelegate.setDeepLink('/home/deeper');
 
   // Beamer 기본
@@ -29,5 +26,8 @@ void main() {
   // runApp(BooksBlocApp());
 
   // Beamer with deep links
-  runApp(const DeepLinksApp());
+  // runApp(const DeepLinksApp());
+
+  // Beamer with guard
+  runApp(BeamGuardApp());
 }
